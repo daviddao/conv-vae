@@ -576,9 +576,7 @@ class ConvVAE(PickleMixin):
         n = 0.
         epochs = 1000
         for e in range(epochs):
-            print('Hello')
             for xmb in iter_data(trX, size=self.n_batch):
-                print('Hello ITER')
                 xmb = floatX(xmb)
                 cost = self._fit_function(xmb, floatX(
                     np.random.randn(xmb.shape[0], self.n_code)))
